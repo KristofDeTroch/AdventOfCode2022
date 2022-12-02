@@ -1,5 +1,5 @@
 [package]
-name = "day01"
+name = "aoc2022"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,3 +10,7 @@ edition = "2021"
 [[example]]
 name = "day_1"
 path = "day01/src/main.rs"
+
+[[example]]
+name = "day_2"
+path = "day02/src/main.rs"
