@@ -8,12 +8,15 @@ edition = "2021"
 [dependencies]
 
 [[example]]
-name = "day_1"
-path = "day01/src/main.rs"
+name = "day01"
+path = "day01/main.rs"
 
 [[example]]
-name = "day_2"
-path = "day02/src/main.rs"
+name = "day02"
+path = "day02/main.rs"
 [[example]]
-name = "day_3"
-path = "day03/src/main.rs"
+name = "day03"
+path = "day03/main.rs"
+[[example]]
+name = "day04"
+path = "day04/main.rs"
