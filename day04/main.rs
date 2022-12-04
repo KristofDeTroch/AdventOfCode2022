@@ -1,7 +1,7 @@
 fn main() {
     let contents = include_str!("input.txt");
-    println!("Part 1: {:?}", part1(contents));
-    println!("Part 2: {:?}", part2(contents));
+    println!("Part 1: {}", part1(contents));
+    println!("Part 2: {}", part2(contents));
 }
 
 fn part1(contents: &str) -> i32 {
@@ -12,8 +12,6 @@ fn part1(contents: &str) -> i32 {
         }
         let assignments = line
             .split(',')
-            .collect::<Vec<&str>>()
-            .iter()
             .map(|c| c.split('-').collect::<Vec<&str>>())
             .collect::<Vec<Vec<&str>>>();
         if is_over_lapping(
@@ -35,8 +33,6 @@ fn part2(contents: &str) -> i32 {
         }
         let assignments = line
             .split(',')
-            .collect::<Vec<&str>>()
-            .iter()
             .map(|c| c.split('-').collect::<Vec<&str>>())
             .collect::<Vec<Vec<&str>>>();
         if is_over_lapping(

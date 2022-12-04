@@ -16,11 +16,7 @@ fn part1(contents: &str) {
         let rhs = &line[line.len() / 2..];
 
         let set: HashSet<char> = lhs.chars().collect();
-        let mistake: Vec<char> = rhs
-            .chars()
-            .into_iter()
-            .filter(|c| set.contains(c))
-            .collect();
+        let mistake: Vec<char> = rhs.chars().filter(|c| set.contains(c)).collect();
         all_mistakes.push(get_priority(mistake.first().unwrap().clone()));
     }
     println!("Part 1 solution: {}", all_mistakes.iter().sum::<u32>())
@@ -34,16 +30,8 @@ fn part2(contents: &str) {
         let second = lines[index + 1];
         let third = lines[index + 2];
         let set: HashSet<char> = first.chars().collect();
-        let temp: Vec<char> = second
-            .chars()
-            .into_iter()
-            .filter(|c| set.contains(c))
-            .collect();
-        let badge: Vec<char> = third
-            .chars()
-            .into_iter()
-            .filter(|c| temp.contains(c))
-            .collect();
+        let temp: Vec<char> = second.chars().filter(|c| set.contains(c)).collect();
+        let badge: Vec<char> = third.chars().filter(|c| temp.contains(c)).collect();
         all_badges.push(get_priority(badge.first().unwrap().clone()));
     }
     println!("Part 2 solution: {}", all_badges.iter().sum::<u32>())
